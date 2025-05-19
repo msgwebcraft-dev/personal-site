@@ -1,0 +1,157 @@
+/* ───────── RESET / BASE ───────── */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #FDF6EC;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Images scale properly */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ───────── HEADER ───────── */
+header {
+    background: #3e9251;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #222;
+}
+
+/* ───────── NAVIGATION ───────── */
+.nav-container {
+    position: relative;
+    background-color: #fbfbfb;
+}
+
+#toggle-menu {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    right: 1rem;
+    top: 1.2rem;
+}
+
+.hamburger span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    margin: 6px auto;
+    background-color: #333;
+    transition: all 0.3s ease-in-out;
+}
+
+nav {
+    text-align: center;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #333;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #00796B;
+}
+
+/* ───────── MAIN CONTENT ───────── */
+main {
+    padding: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+main h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #4DB6AC;
+    margin-bottom: 1rem;
+}
+
+main p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+/* ───────── FOOTER ───────── */
+footer {
+    background: #FFCCBC;
+    text-align: center;
+    padding: 1.5rem;
+    color: #333;
+    font-size: 0.9rem;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+}
+
+footer a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #00796B;
+}
+
+/* ───────── RESPONSIVE ───────── */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #FFE0B2;
+        padding: 1rem;
+        width: 100%;
+    }
+
+    nav li {
+        display: block;
+        margin: 0.5rem 0;
+    }
+
+    #toggle-menu:checked ~ nav ul {
+        display: flex;
+    }
+}

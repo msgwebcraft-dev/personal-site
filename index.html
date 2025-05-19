@@ -1,92 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <!-- Ensures proper rendering on mobile devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Page title: Keep it concise (under 60 characters) and keyword-rich -->
-    <title>My Website - Your Main Keyword Here</title>
-    <!-- Meta description: Summarize content, include keywords, under 160 characters -->
-    <meta name="description" content="Welcome to My Website. Learn about [your topic/keyword] with expert tips and resources.">
-    <!-- Keywords: Optional, but can help with some search engines -->
-    <meta name="keywords" content="your keyword, related keyword, another keyword">
-    <!-- Author meta tag for credibility -->
-    <meta name="author" content="Your Name">
-    <!-- Robots meta tag to allow indexing (default behavior) -->
-    <meta name="robots" content="index, follow">
-    <!-- Open Graph tags for social media sharing (e.g., Facebook, LinkedIn) -->
-    <meta property="og:title" content="My Website - Your Main Keyword Here">
-    <meta property="og:description" content="Welcome to My Website. Learn about [your topic/keyword] with expert tips.">
+    
+    <title>Mmeli Gabriel Dyantyi | Web Developer & Creative Technologist</title>
+    <meta name="description" content="Explore the portfolio of Mmeli Gabriel Dyantyi, a South African Web Developer and Creative Technologist specializing in full-stack development, responsive design, and innovative web solutions.">
+    <meta name="author" content="Mmeli Gabriel Dyantyi">
+    <meta name="keywords" content="Mmeli Gabriel Dyantyi, Web Developer South Africa, Creative Technologist, Frontend Developer, Full-Stack Developer, MSGWebWorks, .NET Developer, Tailwind CSS, ASP.NET, Firebase, Vercel Projects, Portfolio Website, Ionic, Angular, Vanilla JavaScript, LitLink, Student Tracker, Ecommerce, SaaS Dashboard, VibeLink, Dating App">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Mmeli Gabriel Dyantyi | Web Developer Portfolio">
+    <meta property="og:description" content="Portfolio of Mmeli Gabriel Dyantyi - Explore projects in web development, creative tech, and full-stack systems.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.yourwebsite.com">
-    <meta property="og:image" content="https://www.yourwebsite.com/images/og-image.jpg">
-    <!-- Twitter Card tags for Twitter sharing -->
+    <meta property="og:url" content="https://www.msgwebworks.com">
+    <meta property="og:image" content="https://www.msgwebworks.com/images/og-image.jpg">
+
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="My Website - Your Main Keyword Here">
-    <meta name="twitter:description" content="Welcome to My Website. Learn about [your topic/keyword].">
-    <meta name="twitter:image" content="https://www.yourwebsite.com/images/twitter-image.jpg">
-    <!-- Canonical URL to avoid duplicate content issues -->
-    <link rel="canonical" href="https://www.yourwebsite.com">
-    <!-- Favicon for branding -->
-    <link rel="icon" type="image/x-icon" sizes="32x32" href="/msgwebworks-logo1.xcf">
-    <!-- Basic CSS for styling (optional, can be in a separate file) -->
+    <meta name="twitter:title" content="Mmeli Gabriel Dyantyi | Full-Stack Web Developer Portfolio">
+    <meta name="twitter:description" content="Browse projects and skills by Mmeli Gabriel Dyantyi, a passionate developer focused on building sleek, functional web & mobile apps.">
+    <meta name="twitter:image" content="https://www.msgwebworks.com/images/twitter-image.jpg">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://www.msgwebworks.com">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" sizes="32x32" href="/msgwebworks-logo1.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Indie+Flower&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
     <style>
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-        }
-        header, main, footer {
-            padding: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        h1, h2 {
-            color: #333;
+            font-family: 'Nunito', sans-serif;
         }
     </style>
 </head>
-<body>
-    <!-- Header with main heading (use H1 only once per page for SEO) -->
-    <header>
-        <h1>Welcome to My Website</h1>
-        <nav>
-            <!-- Navigation links for better user experience and site structure -->
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+
+<body class="bg-green-50 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-green-300 py-6 shadow">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-3xl font-bold text-white">Mmeli Gabriel Dyantyi</h1>
+            <p class="text-white mt-2">Web Developer | Creative Technologist | Systems Enthusiast</p>
+        </div>
     </header>
 
-    <!-- Main content: Use semantic tags for better accessibility and SEO -->
-    <main>
-        <section id="home">
-            <h2>Your Main Topic</h2>
-            <p>This is the main content of your page. Include relevant keywords naturally in your text to improve SEO. Write for humans first, search engines second.</p>
-            <img src="path-to-image.jpg" alt="Descriptive alt text with keyword" width="600" height="400">
-        </section>
+    <!-- Navigation -->
+    <nav class="bg-green-200 py-3">
+        <ul class="flex justify-center space-x-6 text-green-800 font-semibold">
+            <li><a href="#home" class="hover:text-green-500">Home</a></li>
+            <li><a href="#about" class="hover:text-green-500">About</a></li>
+            <li><a href="#projects" class="hover:text-green-500">Projects</a></li>
+            <li><a href="#contact" class="hover:text-green-500">Contact</a></li>
+        </ul>
+    </nav>
 
-        <section id="about">
-            <h2>About Us</h2>
-            <p>Provide information about your website or business. Use keywords where relevant.</p>
-        </section>
+    <!-- Hero / Home -->
+    <section id="home" class="py-12 text-center">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold text-green-500">Crafting Bold & Beautiful Web Experiences</h2>
+            <p class="mt-4 text-gray-600">Developer passionate about modern tech, creative problem-solving, and digital transformation through code.</p>
+            <img src="/images/profile-showcase.jpg" alt="Mmeli Gabriel Dyantyi Profile Showcase" class="mx-auto mt-6 rounded shadow-md w-full max-w-md">
+        </div>
+    </section>
 
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <p>Reach out to us at <a href="mailto:contact@yourwebsite.com">contact@yourwebsite.com</a>.</p>
-        </section>
-    </main>
+    <!-- About -->
+    <section id="about" class="py-12 bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-xl font-bold text-green-500 mb-4">About Me</h2>
+            <p class="text-gray-700 max-w-xl mx-auto">
+                I'm a South African Web Developer with a passion for building high-impact, scalable, and user-friendly web & mobile apps. I specialize in technologies like HTML, CSS, JavaScript, ASP.NET Core, Firebase, Tailwind CSS, Angular, and Ionic. With a strong academic background in Computer Science & Applied Mathematics at UNISA, I combine logic with creativity to deliver elegant digital solutions.
+            </p>
+        </div>
+    </section>
 
-    <!-- Footer for additional links and copyright (good for internal linking) -->
-    <footer>
-        <p>&copy; 2025 My Website. All rights reserved.</p>
-        <ul>
-            <li><a href="#privacy">Privacy Policy</a></li>
-            <li><a href="#terms">Terms of Service</a></li>
+    <!-- Projects -->
+    <section id="projects" class="py-12 bg-green-100">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-xl font-bold text-green-500 mb-4">Projects</h2>
+            <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                <!-- Project 1 -->
+                <div class="bg-white p-4 rounded shadow-md">
+                    <h3 class="font-semibold text-green-600">LitLink (Party App)</h3>
+                    <p class="text-gray-700 mt-2 text-sm">A mobile-first event networking platform with features like RSVP tracking, table bookings, messaging, and local discovery. Built with Ionic + .NET Core + Firebase.</p>
+                    <a href="#" class="text-green-500 hover:underline mt-2 inline-block">Coming Soon</a>
+                </div>
+                <!-- Project 2 -->
+                <div class="bg-white p-4 rounded shadow-md">
+                    <h3 class="font-semibold text-green-600">VibeLink (Social App)</h3>
+                    <p class="text-gray-700 mt-2 text-sm">A social media app for meaningful connections. Full-stack development with modern auth, messaging, and a dashboard. Built for mobile and web.</p>
+                    <a href="#" class="text-green-500 hover:underline mt-2 inline-block">In Progress</a>
+                </div>
+                <!-- Project 3 -->
+                <div class="bg-white p-4 rounded shadow-md">
+                    <h3 class="font-semibold text-green-600">Student Progress Tracker</h3>
+                    <p class="text-gray-700 mt-2 text-sm">A visual dashboard for tracking academic performance and attendance. Built with HTML, JS, Tailwind & Firebase.</p>
+                    <a href="#" class="text-green-500 hover:underline mt-2 inline-block">View Project</a>
+                </div>
+                <!-- Project 4 -->
+                <div class="bg-white p-4 rounded shadow-md">
+                    <h3 class="font-semibold text-green-600">SaaS Dashboard Template</h3>
+                    <p class="text-gray-700 mt-2 text-sm">A responsive and modular SaaS dashboard interface using Tailwind, chart libraries, and custom UI logic.</p>
+                    <a href="#" class="text-green-500 hover:underline mt-2 inline-block">View Code</a>
+                </div>
+                <!-- Add more project blocks here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-12">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-xl font-bold text-green-500 mb-4">Contact Me</h2>
+            <p class="text-gray-700 mb-2">Let's work together: <a href="mailto:msgwebworks@gmail.com" class="text-green-600 underline">msgwebworks@gmail.com</a></p>
+            <form action="https://formspree.io/f/your-form-id" method="POST" class="max-w-md mx-auto mt-6 space-y-4">
+                <input type="text" name="name" placeholder="Name" required class="w-full px-4 py-2 border border-green-300 rounded">
+                <input type="email" name="email" placeholder="Email" required class="w-full px-4 py-2 border border-green-300 rounded">
+                <textarea name="message" placeholder="Message" rows="4" required class="w-full px-4 py-2 border border-green-300 rounded"></textarea>
+                <button type="submit" class="bg-green-400 hover:bg-green-500 text-white font-semibold px-6 py-2 rounded">Send</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-green-300 text-white text-center py-6">
+        <p>&copy; 2025 MSGWebWorks (Mmeli Gabriel Dyantyi). All rights reserved.</p>
+        <ul class="flex justify-center space-x-4 mt-2">
+            <li><a href="#privacy" class="hover:underline">Privacy Policy</a></li>
+            <li><a href="#terms" class="hover:underline">Terms of Service</a></li>
         </ul>
     </footer>
+
 </body>
+
 </html>

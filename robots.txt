@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /private/
+Allow: /
+
+Sitemap: https://personal-site-zeta-silk.vercel.app/sitemap.xml

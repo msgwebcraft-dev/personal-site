@@ -6,7 +6,11 @@ const About = () => {
       <div className="container mx-auto px-6 text-center">
         <h2 className="text-4xl font-bold text-text mb-12">About Me</h2>
         <p className="text-xl text-text max-w-3xl mx-auto mb-16 leading-relaxed">
-          I am Mmeli Gabriel Dyantyi, a junior software developer and Computer Science & Applied Mathematics student with a strong focus on building fast, clean, and practical digital products. I work across both frontend and backend, using technologies like .NET, Java Spring Boot, Flutter, Firebase, and modern web frameworks to create lightweight, scalable solutions. I'm driven by mastery of fundamentals, long-term technical excellence, and building intelligent, African-first software that solves real problems.
+          I am Mmeli Gabriel Dyantyi, a junior software developer and Computer Science & Applied Mathematics student with a strong 
+          focus on building fast, clean, and practical digital products. I work across both frontend and backend, using technologies 
+          like .NET, Java Spring Boot, Flutter, Firebase, and modern web frameworks to create lightweight, scalable solutions. 
+          I&apos;m driven by mastery of fundamentals,
+           long-term technical excellence, and building intelligent, African-first software that solves real problems.
         </p>
         <div className="grid md:grid-cols-3 gap-12">
           <div className="bg-secondary p-8 rounded-lg border border-accent">

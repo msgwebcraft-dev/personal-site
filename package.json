@@ -22,8 +22,17 @@
   },
   "eslintConfig": {
     "extends": [
-      "react-app"
-    ]
+      "eslint:recommended",
+      "plugin:react/recommended"
+    ],
+    "plugins": [
+      "react"
+    ],
+    "settings": {
+      "react": {
+        "version": "detect"
+      }
+    }
   },
   "browserslist": {
     "production": [
@@ -39,6 +48,7 @@
   },
   "devDependencies": {
     "eslint": "^9.38.0",
-    "react-scripts": "^0.0.0"
+    "eslint-plugin-react": "^7.37.5",
+    "react-scripts": "^5.0.1"
   }
 }

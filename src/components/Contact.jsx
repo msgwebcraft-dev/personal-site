@@ -48,7 +48,7 @@ const Contact = () => {
     <section id="contact" className="py-32 bg-primary">
       <div className="container mx-auto px-6 text-center">
         <h2 className="text-4xl font-bold text-text mb-8">Get In Touch</h2>
-        <p className="text-xl text-secondary mb-16 max-w-2xl mx-auto leading-relaxed">Have a project in mind? Let's collaborate — I'm always open to exciting opportunities.</p>
+        <p className="text-xl text-secondary mb-16 max-w-2xl mx-auto leading-relaxed">Have a project in mind? Let&apos;s collaborate — I&apos;m always open to exciting opportunities.</p>
 
         <form id="my-form" action="https://formspree.io/f/mldbvnod" method="POST" onSubmit={handleSubmit} className="max-w-2xl mx-auto grid gap-8">
           <input

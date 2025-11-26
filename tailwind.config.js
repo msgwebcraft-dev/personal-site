@@ -1,35 +1,23 @@
-/** @type {import('tailwindcss').Config} */
-export const content = [
-  "./src/**/*.{js,jsx,ts,tsx}",
-];
-export const darkMode = 'class';
-export const theme = {
-  extend: {
-    colors: {
-      primary: {
-        DEFAULT: '#000000',
-        light: '#FFFFFF',
+// tailwind.config.js
+module.exports = {
+  darkMode: 'class', // Enables manual dark mode toggling
+  content: ['./src/**/*.{js,jsx,ts,tsx}'],
+  theme: {
+    extend: {
+      colors: {
+        primary: '#2563eb', // Tailwind blue-600
+        secondary: '#10b981', // Tailwind emerald-500
+        accent: '#f59e0b', // Tailwind amber-500
+        background: '#f9fafb',
+        darkBackground: '#0f172a',
+        text: '#111827',
+        darkText: '#f8fafc',
       },
-      accent: '#FF8C09',
-      background: {
-        DEFAULT: '#000000',
-        light: '#FFFFFF',
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
+        heading: ['Poppins', 'sans-serif'],
       },
-      text: {
-        DEFAULT: '#FFFFFF',
-        light: '#000000',
-      },
-      secondary: {
-        DEFAULT: '#CCCCCC',
-        light: '#555555',
-      },
-    },
-    fontFamily: {
-      heading: ['Inter', 'sans-serif'],
-      body: ['IBM Plex Sans', 'sans-serif'],
-      code: ['Fira Code', 'monospace'],
     },
   },
+  plugins: [],
 };
-export const plugins = [];
-

@@ -1,18 +1,24 @@
-import React from 'react';
+import React from "react";
 
 export default function Reflection() {
   return (
-    <div className="container mx-auto p-8">
-      <h2 className="text-3xl font-semibold mb-4">Reflection</h2>
-      <p>
-        This portfolio represents my journey as a developer and entrepreneur.  
-        <strong>What I learned:</strong> working with modern frontend and backend tools, structuring full-stack projects, balancing studies and freelance work.  
+    <div className="min-h-screen bg-gradient-to-r from-orange-500 via-pink-500 to-red-600 text-white flex flex-col items-center justify-center p-10 text-center space-y-6">
+      <h2 className="text-4xl font-bold">Reflection</h2>
+
+      <p className="text-lg max-w-2xl">
+        This portfolio represents my journey as a developer.  
+        <strong className="block mt-2">What I learned:</strong>  
+        Working with modern frontend and backend tools, structuring full‑stack projects, and balancing studies with freelance work.
       </p>
-      <p className="mt-4">
-        <strong>Strengths:</strong> fast learner, eager to adopt DevOps practices, strong math & CS foundation, problem-solving mindset.  
+
+      <p className="text-lg max-w-2xl">
+        <strong className="block mt-2">Strengths:</strong>  
+        Fast learner, eager to adopt DevOps practices, strong math & CS foundation, and a problem‑solving mindset.
       </p>
-      <p className="mt-4">
-        <strong>Future Goals:</strong> build scalable African-focused fintech solutions, integrate AI & ML into apps, grow MSGWebWorks into a reliable dev agency.  
+
+      <p className="text-lg max-w-2xl">
+        <strong className="block mt-2">Future Goals:</strong>  
+        Expand into AI/ML and cloud‑native solutions, advance DevOps automation, and grow MSGWebWorks into a reliable dev agency.
       </p>
     </div>
   );

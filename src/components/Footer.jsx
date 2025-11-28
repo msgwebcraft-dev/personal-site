@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white p-4 text-center">
-      © {new Date().getFullYear()} Mmela Gabriel Dyantyi — MSGWebWorks
+    <footer className="bg-gradient-to-r from-gray-900 via-gray-800 to-black text-white py-4 text-center">
+      © {new Date().getFullYear()} Mmeli Gabriel Dyantyi
     </footer>
   );
 }

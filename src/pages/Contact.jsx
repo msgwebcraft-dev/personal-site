@@ -1,14 +1,52 @@
-import React from 'react';
+import React from "react";
 
 export default function Contact() {
   return (
-    <div className="container mx-auto p-8">
-      <h2 className="text-3xl font-semibold mb-4">Contact</h2>
-      <p>Email: <a href="mailto:your.email@example.com" className="text-blue-600">your.email@example.com</a></p>
-      <p>GitHub: <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer" className="text-blue-600">@your-username</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer" className="text-blue-600">Profile</a></p>
-      <p className="mt-4">
-        <a href="/resume.pdf" download className="px-4 py-2 bg-blue-600 text-white rounded">Download CV</a>
+    <div className="min-h-screen bg-gradient-to-r from-cyan-700 via-blue-800 to-indigo-900 text-white flex flex-col items-center justify-center p-8 text-center space-y-6">
+      <h2 className="text-4xl font-bold">Contact</h2>
+
+      <p className="text-lg">
+        Email:{" "}
+        <a
+          href="mailto:mmeligabrieldyantyil@gmail.com"
+          className="text-yellow-300 underline"
+        >
+          mmeligabrieldyantyil@gmail.com
+        </a>
+      </p>
+
+      <p className="text-lg">
+        GitHub:{" "}
+        <a
+          href="https://github.com/MmelIGaba"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-yellow-300 underline"
+        >
+          @MmelIGaba
+        </a>
+      </p>
+
+      <p className="text-lg">
+        LinkedIn:{" "}
+        <a
+          href="https://www.linkedin.com/in/your-profile"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-yellow-300 underline"
+        >
+          Profile
+        </a>
+      </p>
+
+      <p className="mt-6">
+        <a
+          href="https://drive.google.com/file/d/1QMRI62VWNebooKroMFU87nohICbEW7gN/view?usp=sharing"
+          download
+          className="px-6 py-3 bg-yellow-400 text-gray-900 font-semibold rounded-lg shadow-md hover:bg-yellow-300 transition"
+        >
+          Download CV
+        </a>
       </p>
     </div>
   );

@@ -1,6 +1,5 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import ThemeToggle from "./ToggleMode";
 
 const links = [
   { to: "/", label: "Home" },
@@ -14,21 +13,22 @@ const links = [
 
 export default function Navbar() {
   return (
-    <nav className="bg-gray-800 text-white p-4">
-      <ul className="flex space-x-4">
+    <nav className="bg-gradient-to-r from-blue-800 via-indigo-800 to-purple-800 text-white p-4 shadow-md">
+      <ul className="flex items-center space-x-6">
         {links.map((l) => (
           <li key={l.to}>
             <NavLink
               to={l.to}
               className={({ isActive }) =>
-                isActive ? "font-bold underline" : ""
+                isActive
+                  ? "font-bold underline text-yellow-300"
+                  : "hover:text-yellow-300 transition"
               }
             >
               {l.label}
             </NavLink>
           </li>
-        ))}<div className="flex-grow" />
-        <ThemeToggle />
+        ))}
       </ul>
     </nav>
   );

@@ -8,23 +8,58 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Smooth scroll for all pages */
+/* Smooth scroll */
 html {
   scroll-behavior: smooth;
 }
 
-/* Global font setup */
+/* Global font and theme */
 body {
   font-family: 'IBM Plex Sans', 'Inter', sans-serif;
-  @apply bg-white text-gray-900 dark:bg-gray-900 dark:text-white transition-colors duration-300;
 }
+
+.body-theme {
+  @apply bg-black text-white transition-colors duration-300;
+}
+
 
 /* Code blocks */
 code {
   font-family: 'Fira Code', source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
-/* Optional: utility classes for light mode overrides */
+/* Logo animation */
+.logo {
+  height: 40vmin;
+  pointer-events: none;
+  animation: logo-spin infinite 20s linear;
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Header styling */
+.header {
+  @apply bg-black text-white p-6 flex justify-between items-center shadow-md;
+}
+
+/* Link styling */
+.link {
+  @apply text-orange-500 hover:text-orange-600 transition-colors duration-200;
+}
+
+/* Accent overrides */
+.text-accent {
+  @apply text-orange-500 font-bold;
+}
+
+/* Optional light mode overrides */
 .light .bg-primary {
   background-color: #ffffff;
 }

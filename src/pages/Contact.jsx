@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Contact() {
   return (
-    <div className="min-h-screen bg-gradient-to-r from-cyan-700 via-blue-800 to-indigo-900 text-white flex flex-col items-center justify-center p-8 text-center space-y-6">
+    <div className="min-h-screen bg-gradient-to-r from-cyan-700 via-blue-800 to-indigo-900 dark:from-cyan-800 dark:via-blue-900 dark:to-indigo-1000 text-white flex flex-col items-center justify-center p-8 text-center space-y-6">
       <h2 className="text-4xl font-bold">Contact</h2>
 
       <p className="text-lg">

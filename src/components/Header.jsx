@@ -1,55 +1,59 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import { FiMenu, FiX } from "react-icons/fi";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isLightMode, setIsLightMode] = useState(true);
-
-  useEffect(() => {
-    if (isLightMode) {
-      document.documentElement.classList.add("light");
-    } else {
-      document.documentElement.classList.remove("light");
-    }
-  }, [isLightMode]);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-  const toggleLightMode = () => setIsLightMode(!isLightMode);
+
+  const links = [
+    { label: "Home", href: "#home" },
+    { label: "About", href: "#about" },
+    { label: "Projects", href: "#projects" },
+    { label: "Contact", href: "#contact" },
+  ];
 
   return (
-    <header className="fixed top-0 left-0 w-full bg-gradient-to-r from-indigo-700 via-purple-700 to-pink-700 text-white z-50 shadow-md">
-      <div className="container mx-auto flex justify-between items-center py-4 px-6">
-        <h1 className="text-xl md:text-2xl font-bold">Mmeli Gabriel Dyantyi</h1>
-        <nav className="hidden md:flex items-center space-x-8">
-          <ul className="flex space-x-8">
-            <li><a href="#home" className="hover:text-yellow-300 transition">Home</a></li>
-            <li><a href="#about" className="hover:text-yellow-300 transition">About</a></li>
-            <li><a href="#projects" className="hover:text-yellow-300 transition">Projects</a></li>
-            <li><a href="#contact" className="hover:text-yellow-300 transition">Contact</a></li>
-          </ul>
-          <button
-            onClick={toggleLightMode}
-            className="ml-4 p-2 rounded-full hover:bg-yellow-300 hover:bg-opacity-20 transition"
-            aria-label="Toggle light mode"
-          >
-            {isLightMode ? "☀️" : "🌙"}
-          </button>
+    <header className="fixed top-2 left-0 w-[calc(100%-1rem)] mx-2 z-50 bg-gradient-to-r from-blue-800 via-indigo-800 to-purple-800 text-white shadow-lg rounded-xl transition-all">
+      <div className="max-w-7xl mx-auto flex justify-between items-center py-3 px-4 md:px-8">
+        <h1 className="text-lg md:text-xl font-bold tracking-wide">OGaba</h1>
+
+        {/* Desktop Links */}
+        <nav className="hidden md:flex items-center space-x-6">
+          {links.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              className="hover:text-yellow-300 transition-colors duration-300 font-medium"
+            >
+              {link.label}
+            </a>
+          ))}
         </nav>
+
+        {/* Mobile Hamburger */}
         <div className="md:hidden flex items-center">
-          <button
-            onClick={toggleMenu}
-            className="text-white focus:outline-none"
-          >
-            ☰
+          <button onClick={toggleMenu} className="text-white text-2xl focus:outline-none">
+            {isMenuOpen ? <FiX /> : <FiMenu />}
           </button>
         </div>
       </div>
+
+      {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-indigo-800 text-white">
-          <ul className="flex flex-col space-y-4 py-6 px-6">
-            <li><a href="#home" onClick={toggleMenu}>Home</a></li>
-            <li><a href="#about" onClick={toggleMenu}>About</a></li>
-            <li><a href="#projects" onClick={toggleMenu}>Projects</a></li>
-            <li><a href="#contact" onClick={toggleMenu}>Contact</a></li>
+        <div className="md:hidden bg-[#001820] text-white rounded-b-xl shadow-md px-4 py-4 animate-fade-in">
+          <ul className="flex flex-col space-y-4">
+            {links.map((link) => (
+              <li key={link.href}>
+                <a
+                  href={link.href}
+                  onClick={toggleMenu}
+                  className="block hover:text-yellow-300 transition-colors duration-300"
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
       )}

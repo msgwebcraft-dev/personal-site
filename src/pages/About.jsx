@@ -1,30 +1,82 @@
 import React from "react";
 
-export default function About() {
+const skillCategories = {
+  "Front-End": ["HTML", "CSS", "JavaScript", "Ionic", "Angular", "React"],
+  "Back-End / API": [".NET", "C#", "Python", "Java Spring Boot"],
+  "Cloud & Security": ["Firebase", "OAuth 2.0", "AWS (learning)", "Azure (learning)"],
+  "DevOps & Infra": ["Docker", "Git", "CI/CD", "Vercel", "Linux / Ubuntu"],
+  "Data & Math": ["Applied Mathematics", "Algorithms & Data Structures", "SQL", "Modelling"],
+};
+
+export default function AboutSkills() {
   return (
-    <div className="min-h-screen bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white flex flex-col items-center justify-center p-8 text-center space-y-6">
-      <h2 className="text-4xl font-bold">About Me</h2>
+    <div className="min-h-screen bg-black text-gray-100 py-16 px-6 md:px-12">
 
-      <p className="text-lg max-w-2xl">
-        I’m a software developer passionate about building scalable, cloud‑ready applications 
-        and integrating modern engineering practices. My experience spans front‑end frameworks 
-        (HTML, CSS, Ionic, Angular, React), back‑end development (.NET, APIs, Python, Java Spring Boot), 
-        and cloud & security tools (Firebase, OAuth 2.0, Docker, CI/CD).
-      </p>
+      {/* ABOUT ME SECTION */}
+      <section className="max-w-5xl mx-auto text-center md:text-left mb-16">
+        <h2 className="text-4xl md:text-5xl font-bold mb-6 text-cyan-300 animate-fade-in">
+          About Me
+        </h2>
 
-      <p className="text-lg max-w-2xl">
-        I focus on creating systems that are performant, maintainable, and trustworthy — with a 
-        strong interest in cloud engineering, AI/ML, and DevOps automation.
-      </p>
+        <p className="text-lg md:text-xl mb-4 text-gray-300 animate-fade-in delay-100 leading-relaxed">
+          I’m a software developer and systems creator, passionate about
+          building scalable, cloud‑ready applications and weaving modern
+          engineering practices into every project.
+        </p>
 
-      <div>
-        <h3 className="text-2xl font-semibold mb-3">Goals</h3>
-        <ul className="list-disc list-inside text-left max-w-md mx-auto space-y-2">
-          <li>Expand into AI/ML & cloud‑native solutions</li>
-          <li>Advance cloud engineering with container orchestration & serverless computing</li>
-          <li>Deliver high‑quality, trust‑forward software for clients and communities</li>
-        </ul>
-      </div>
+        <p className="text-lg md:text-xl mb-6 text-gray-400 animate-fade-in delay-200 leading-relaxed">
+          My focus is crafting systems that are performant, maintainable, and trustworthy — 
+          with deep curiosity in AI/ML, DevOps automation, and cloud-native architectures.
+        </p>
+
+        <p className="text-lg md:text-xl mb-6 text-gray-400 animate-fade-in delay-300 leading-relaxed">
+          Each project is a forge: ideas, code, and machines come together to create systems
+          that are practical, elegant, and built to last.
+        </p>
+
+        <div className="animate-fade-in delay-400">
+          <h3 className="text-2xl font-semibold mb-3 text-cyan-200">Goals</h3>
+          <ul className="list-disc list-inside text-left max-w-md mx-auto md:mx-0 space-y-2 text-gray-300">
+            <li>Expand into AI/ML & cloud-native solutions</li>
+            <li>Advance cloud engineering with container orchestration & serverless computing</li>
+            <li>Deliver high-quality, trustworthy software</li>
+            <li>Integrate mechanical, electrical, and intelligent systems</li>
+          </ul>
+        </div>
+      </section>
+
+      {/* SKILLS SECTION */}
+      <section className="max-w-6xl mx-auto">
+        <h2 className="text-3xl md:text-4xl font-semibold text-center mb-8 text-cyan-300 animate-fade-in">
+          Skills
+        </h2>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {Object.entries(skillCategories).map(([category, skills]) => (
+            <div key={category} className="bg-[#111111] p-6 rounded-xl shadow-lg">
+              <h3 className="text-xl font-semibold mb-4 text-gray-200">{category}</h3>
+              <ul className="list-disc list-inside space-y-2 text-gray-300">
+                {skills.map((skill) => (
+                  <li key={skill}>{skill}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Simple fade-in animation */}
+      <style>{`
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(10px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in { animation: fadeIn 0.8s forwards; }
+        .animate-fade-in.delay-100 { animation-delay: 0.1s; }
+        .animate-fade-in.delay-200 { animation-delay: 0.2s; }
+        .animate-fade-in.delay-300 { animation-delay: 0.3s; }
+        .animate-fade-in.delay-400 { animation-delay: 0.4s; }
+      `}</style>
     </div>
   );
 }

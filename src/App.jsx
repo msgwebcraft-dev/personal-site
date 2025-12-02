@@ -9,7 +9,6 @@ import About from './pages/About';
 import Projects from './pages/Projects';
 import Capstone from './pages/Capstone';
 import Contact from './pages/Contact';
-import Reflection from './pages/Reflection';
 import { ThemeProvider } from './context/ThemeContext';
 
 function App() {
@@ -28,7 +27,6 @@ function App() {
               <Route path="/projects" element={<Projects />} />
               <Route path="/capstone" element={<Capstone />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="/reflection" element={<Reflection />} />
             </Routes>
           </main>
         </div>

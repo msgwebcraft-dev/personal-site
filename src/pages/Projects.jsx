@@ -17,7 +17,7 @@ const initialProjects = [
     tools: "React, Express, PostgreSQL",
     liveLink: "https://prepcheck-1.onrender.com/",
     repoLink: "https://github.com/MmelIGaba/PrepCheck",
-    imgSrc: "public/assets/prepcheck.png",
+    imgSrc: "assets/PrepCheck.png",
   },
   {
     title: "RetailPulse",

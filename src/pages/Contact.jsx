@@ -6,7 +6,7 @@ export default function Contact() {
   const [state, handleSubmit] = useForm("meoykzap");
 
   return (
-    <div className="min-h-screen bg-gradient-to-r from-black via-gray-800 to-gray-900 dark:from-cyan-800 dark:via-blue-900 dark:to-indigo-900 text-white flex flex-col items-center justify-center p-8 text-center space-y-10">
+<div className="min-h-screen bg-transparent text-white flex flex-col items-center justify-center p-8 text-center space-y-10">
       <h2 className="text-4xl font-bold">Get in Touch</h2>
 
       <p className="text-lg max-w-xl">
@@ -78,24 +78,13 @@ export default function Contact() {
         <a href="https://github.com/MmelIGaba" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition">
           <FaGithub />
         </a>
-        <a href="https://www.linkedin.com/in/" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition">
+        <a href="https://shorturl.at/TBFt5" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition">
           <FaLinkedin />
         </a>
         <a href="https://wa.me/0835044366" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition">
           <FaWhatsapp />
         </a>
       </div>
-
-      {/* CV Download */}
-      <p className="mt-6">
-        <a
-          href="https://drive.google.com/file/d/1QMRI62VWNebooKroMFU87nohICbEW7gN/view?usp=sharing"
-          download
-          className="px-6 py-3 bg-cyan-200 text-gray-900 font-semibold rounded-lg shadow-md hover:bg-cyan-300 transition"
-        >
-          Download CV
-        </a>
-      </p>
     </div>
   );
 }

@@ -24,19 +24,19 @@ export default function AboutSkills() {
           engineering practices into every project.
         </p>
 
-        <p className="text-lg md:text-xl mb-6 text-gray-400 animate-fade-in delay-200 leading-relaxed">
+        <p className="text-lg md:text-xl mb-6 text-gray-300 animate-fade-in delay-200 leading-relaxed">
           My focus is crafting systems that are performant, maintainable, and trustworthy — 
           with deep curiosity in AI/ML, DevOps automation, and cloud-native architectures.
         </p>
 
-        <p className="text-lg md:text-xl mb-6 text-gray-400 animate-fade-in delay-300 leading-relaxed">
+        <p className="text-lg md:text-xl mb-6 text-gray-300 animate-fade-in delay-300 leading-relaxed">
           Each project is a forge: ideas, code, and machines come together to create systems
           that are practical, elegant, and built to last.
         </p>
 
         <div className="animate-fade-in delay-400">
           <h3 className="text-2xl font-semibold mb-3 text-cyan-200">Goals</h3>
-          <ul className="list-disc list-inside text-left max-w-md mx-auto md:mx-0 space-y-2 text-gray-300">
+          <ul className="text-lg md:text-xl mb-6 text-gray-400 animate-fade-in delay-300 leading-relaxed list-disc list-inside">
             <li>Expand into AI/ML & cloud-native solutions</li>
             <li>Advance cloud engineering with container orchestration & serverless computing</li>
             <li>Deliver high-quality, trustworthy software</li>
@@ -63,6 +63,17 @@ export default function AboutSkills() {
             </div>
           ))}
         </div>
+        <div className="text-center mt-12">
+              {/* CV Download */}
+      <p className="mt-6">
+        <a
+          href="https://drive.google.com/file/d/1QMRI62VWNebooKroMFU87nohICbEW7gN/view?usp=sharing"
+          download
+          className="px-6 py-3 bg-cyan-200 text-gray-900 font-semibold rounded-lg shadow-md hover:bg-cyan-300 transition"
+        >
+          Download CV
+        </a>
+      </p></div>
       </section>
 
       {/* Simple fade-in animation */}

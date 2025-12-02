@@ -1,8 +1,24 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import AddProjectModal from "../components/AddProjectModal";
-
+import prep from "../prep.png";
 // Initial projects
 const initialProjects = [
+  {
+    title: "PrepCheck",
+    description: "An application for preparing and checking readiness for exams or tasks.",
+    tools: "React, Express, PostgreSQL",
+    liveLink: "https://prepcheck-1.onrender.com/",
+    repoLink: "https://github.com/MmelIGaba/PrepCheck",
+    imgSrc: "../prep.png",
+  },
+  {
+    title: "RetailPulse",
+    description: "A data analyst tool for retail insights and pulse monitoring.",
+    tools: "Streamlit, Python, Pandas",
+    liveLink: "https://retailpulse-04.streamlit.app/",
+    repoLink: "https://github.com/MmelIGaba/RetailPulse",
+    imgSrc: prep,
+  },
   {
     title: "PomoTask",
     description: "A productivity app using Pomodoro technique for task management.",
@@ -11,27 +27,12 @@ const initialProjects = [
     repoLink: "https://github.com/itsleonbro/PomoTask",
     imgSrc: "assets/PomoTask.png",
   },
-  {
-    title: "PrepCheck",
-    description: "An application for preparing and checking readiness for exams or tasks.",
-    tools: "React, Express, PostgreSQL",
-    liveLink: "https://prepcheck-1.onrender.com/",
-    repoLink: "https://github.com/MmelIGaba/PrepCheck",
-    imgSrc: "assets/PrepCheck.png",
-  },
-  {
-    title: "RetailPulse",
-    description: "A data analyst tool for retail insights and pulse monitoring.",
-    tools: "Streamlit, Python, Pandas",
-    liveLink: "https://retailpulse-04.streamlit.app/",
-    repoLink: "https://github.com/MmelIGaba/RetailPulse",
-    imgSrc: "public/assets/retail.png",
-  },
 ];
 
 export default function Projects() {
   const [projects, setProjects] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const canvasRef = useRef(null);
 
   useEffect(() => {
     const storedProjects = localStorage.getItem("projects");
@@ -43,13 +44,61 @@ export default function Projects() {
     }
   }, []);
 
+  // Water ripple effect
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    const ctx = canvas.getContext("2d");
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    let ripples = [];
+
+    function draw() {
+      ctx.fillStyle = "#00111a";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      ripples.forEach((ripple, i) => {
+        ctx.beginPath();
+        ctx.arc(ripple.x, ripple.y, ripple.radius, 0, Math.PI * 2);
+        ctx.strokeStyle = `rgba(0, 200, 255, ${ripple.alpha})`;
+        ctx.lineWidth = 2;
+        ctx.stroke();
+
+        ripple.radius += 1.5; // expand ripple
+        ripple.alpha -= 0.01; // fade out
+
+        if (ripple.alpha <= 0) ripples.splice(i, 1);
+      });
+
+      requestAnimationFrame(draw);
+    }
+
+    draw();
+
+    const handleMove = (e) => {
+      ripples.push({ x: e.clientX, y: e.clientY, radius: 5, alpha: 0.4 });
+    };
+
+    const handleClick = (e) => {
+      ripples.push({ x: e.clientX, y: e.clientY, radius: 10, alpha: 0.8 });
+    };
+
+    canvas.addEventListener("mousemove", handleMove);
+    canvas.addEventListener("click", handleClick);
+
+    return () => {
+      canvas.removeEventListener("mousemove", handleMove);
+      canvas.removeEventListener("click", handleClick);
+    };
+  }, []);
+
   return (
     <div className="relative bg-[#00111a] text-gray-200 min-h-screen">
-
-      {/* Water-like background */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="w-full h-full bg-gradient-to-b from-[#00111a] via-[#001820] to-[#002630] animate-pulse-slow"></div>
-      </div>
+      {/* Water ripple canvas */}
+      <canvas
+        ref={canvasRef}
+        className="absolute inset-0 w-full h-full"
+      />
 
       {/* Projects Section */}
       <section className="relative py-24 px-6 flex flex-col items-center">
@@ -124,15 +173,6 @@ export default function Projects() {
           }}
         />
       </section>
-
-      {/* Tailwind custom animation */}
-      <style>{`
-        @keyframes pulse-slow {
-          0%, 100% { opacity: 0.85; }
-          50% { opacity: 1; }
-        }
-        .animate-pulse-slow { animation: pulse-slow 8s ease-in-out infinite; }
-      `}</style>
     </div>
   );
 }

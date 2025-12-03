@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import AddProjectModal from "../components/AddProjectModal";
 import prep from "../prep.png";
 // Initial projects
@@ -32,7 +32,6 @@ const initialProjects = [
 export default function Projects() {
   const [projects, setProjects] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const canvasRef = useRef(null);
 
   useEffect(() => {
     const storedProjects = localStorage.getItem("projects");
@@ -44,62 +43,8 @@ export default function Projects() {
     }
   }, []);
 
-  // Water ripple effect
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    const ctx = canvas.getContext("2d");
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-
-    let ripples = [];
-
-    function draw() {
-      ctx.fillStyle = "#00111a";
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-      ripples.forEach((ripple, i) => {
-        ctx.beginPath();
-        ctx.arc(ripple.x, ripple.y, ripple.radius, 0, Math.PI * 2);
-        ctx.strokeStyle = `rgba(0, 200, 255, ${ripple.alpha})`;
-        ctx.lineWidth = 2;
-        ctx.stroke();
-
-        ripple.radius += 1.5; // expand ripple
-        ripple.alpha -= 0.01; // fade out
-
-        if (ripple.alpha <= 0) ripples.splice(i, 1);
-      });
-
-      requestAnimationFrame(draw);
-    }
-
-    draw();
-
-    const handleMove = (e) => {
-      ripples.push({ x: e.clientX, y: e.clientY, radius: 5, alpha: 0.4 });
-    };
-
-    const handleClick = (e) => {
-      ripples.push({ x: e.clientX, y: e.clientY, radius: 10, alpha: 0.8 });
-    };
-
-    canvas.addEventListener("mousemove", handleMove);
-    canvas.addEventListener("click", handleClick);
-
-    return () => {
-      canvas.removeEventListener("mousemove", handleMove);
-      canvas.removeEventListener("click", handleClick);
-    };
-  }, []);
-
   return (
-    <div className="relative bg-[#00111a] text-gray-200 min-h-screen">
-      {/* Water ripple canvas */}
-      <canvas
-        ref={canvasRef}
-        className="absolute inset-0 w-full h-full"
-      />
-
+    <>
       {/* Projects Section */}
       <section className="relative py-24 px-6 flex flex-col items-center">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl w-full">
@@ -156,7 +101,7 @@ export default function Projects() {
         {/* Add Project Button */}
         <button
           onClick={() => setIsModalOpen(true)}
-          className="fixed bottom-6 right-6 bg-yellow-400 text-gray-900 font-bold
+          className="fixed bottom-6 right-6 bg-yellow-500 text-gray-900 font-bold
                      p-4 rounded-full shadow-lg hover:bg-yellow-300 transition"
           title="Add Project"
         >
@@ -173,6 +118,6 @@ export default function Projects() {
           }}
         />
       </section>
-    </div>
+    </>
   );
 }

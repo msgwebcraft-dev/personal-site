@@ -17,7 +17,7 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="sticky top-2 z-50 mx-4 md:mx-8 bg-gradient-to-r from-black-800 via-indigo-800 to-grey-800 dark:from-gray-900 dark:via-indigo-900 dark:to-black-900
+    <nav className="bg-black sticky top-2 z-50 mx-4 md:mx-8 bg-gradient-to-r from-black-800 via-indigo-800 to-grey-800 dark:from-gray-900 dark:via-indigo-900 dark:to-black-900
                     text-white shadow-md rounded-xl">
       <div className="max-w-7xl mx-auto px-4 py-2 flex justify-between items-center">
         {/* Desktop Links */}

@@ -10,7 +10,7 @@ export default function Home() {
   };
 
   return (
-    <div className="bg-[#0a0a0c] text-gray-200 font-mono min-h-screen flex flex-col">
+    <div className="text-gray-200 font-mono min-h-screen flex flex-col">
       {/* HERO */}
       <section className="flex flex-col items-center justify-center h-screen text-center px-6">
         <h1 className="text-4xl md:text-6xl font-semibold tracking-wide">

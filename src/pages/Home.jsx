@@ -10,6 +10,8 @@ export default function Home() {
   };
 
   return (
+    <div className="flex flex-col min-h-screen text-gray-200 bg-transparent">
+
     <div className="text-gray-200 font-mono min-h-screen flex flex-col">
       {/* HERO */}
       <section className="flex flex-col items-center justify-center h-screen text-center px-6">
@@ -37,6 +39,6 @@ export default function Home() {
           ▼
         </div>
       </section>
-    </div>
+    </div></div>
   );
 }

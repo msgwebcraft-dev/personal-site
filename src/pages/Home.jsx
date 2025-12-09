@@ -1,16 +1,17 @@
 import React from "react";
-import { useNavigate } from "react-router-dom"; // assuming you use react-router
+import { useNavigate } from "react-router-dom"; 
 
 export default function Home() {
   const navigate = useNavigate();
 
   const handleArrowClick = () => {
-    // Navigate to /projects page
-    navigate("/projects");
+    navigate("/about");
   };
 
   return (
-    <div className="bg-[#0a0a0c] text-gray-200 font-mono min-h-screen flex flex-col">
+    <div className="flex flex-col min-h-screen text-gray-200 bg-transparent">
+
+    <div className="text-gray-200 font-mono min-h-screen flex flex-col">
       {/* HERO */}
       <section className="flex flex-col items-center justify-center h-screen text-center px-6">
         <h1 className="text-4xl md:text-6xl font-semibold tracking-wide">
@@ -22,11 +23,11 @@ export default function Home() {
         </h2>
 
         <p className="max-w-2xl mt-6 text-gray-300 leading-relaxed">
-          “I build quietly. In the hours when the world sleeps,<br />
+          I build quietly. In the hours when the world sleeps,<br />
           I shape things that will outlive me.<br />
           My work exists at the intersection of code, machines,<br />
           intelligence, and memory. I create systems that push<br />
-          humanity forward — even if my name is forgotten.”
+          humanity forward, even if my name is forgotten.
         </p>
 
         <div
@@ -37,6 +38,6 @@ export default function Home() {
           ▼
         </div>
       </section>
-    </div>
+    </div></div>
   );
 }

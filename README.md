@@ -1,59 +1,68 @@
-# Personal‑Site
+# Mmeli Gabriel Dyantyi — Portfolio
 
-A personal portfolio website for **MSGWebWorks** and its developer
-(Mmela Gabriel). Showcases projects, skills, and background --- ideal
-for sharing with potential clients, collaborators, or employers.
+![Static Badge](https://img.shields.io/badge/Systems_Developer-black?style=flat-square&logo=linux&logoColor=white)
+![Static Badge](https://img.shields.io/badge/Cloud_Engineer-orange?style=flat-square&logo=amazonaws&logoColor=white)
+![Static Badge](https://img.shields.io/badge/DevOps_Engineer-black?style=flat-square&logo=githubactions&logoColor=white)
+![Static Badge](https://img.shields.io/badge/Full--stack_Builder-orange?style=flat-square&logo=react&logoColor=white)
+![Static Badge](https://img.shields.io/badge/Built_with-React_Vite-black?style=flat-square&logo=react&logoColor=61DAFB)
 
-## Overview
+A modern, single‑page portfolio built with **React + Vite**, designed in a black-midnight-deep-ocean theme to reflect my engineering identity:  
+**Systems Development • Cloud Engineering • DevOps Automation • Full‑stack Architecture**
 
-This site is a clean, responsive, single‑page (or multi‑page) web
-portfolio built with modern web tools.\
-It lets me present my past and current projects (with descriptions,
-tools used, links, images), and serves as a public face for MSGWebWorks.
+---
 
-**Why I built it:**\
-- To consolidate and showcase my work in one place.\
-- To have a professional web presence.\
-- To experiment with frontend technologies.
+## Live Features
+- Smooth‑scroll single‑page layout  
+- Fixed navbar (orange branding)  
+- Hero section with bold identity  
+- About section with engineering focus  
+- Projects grid (cloud, systems, full‑stack)  
+- Contact section (email + location)  
+- Responsive + minimal + high‑contrast UI  
+
+---
 
 ## Tech Stack
 
--   React\
--   Tailwind CSS\
--   Vercel\
--   Static assets under `/public/assets`
+![Static Badge](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)
+![Static Badge](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=FFD62E)
+![Static Badge](https://img.shields.io/badge/JavaScript-black?style=flat-square&logo=javascript)
+![Static Badge](https://img.shields.io/badge/CSS3-orange?style=flat-square&logo=css3&logoColor=white)
 
-## Folder Structure
+**DevOps / Cloud**
 
-    /assets
-    /public
-    /src
-      ├── components
-      ├── pages
-      └── App.jsx
+![Static Badge](https://img.shields.io/badge/AWS-black?style=flat-square&logo=amazonaws)
+![Static Badge](https://img.shields.io/badge/Docker-orange?style=flat-square&logo=docker&logoColor=white)
+![Static Badge](https://img.shields.io/badge/GitHub_Actions-black?style=flat-square&logo=githubactions)
+![Static Badge](https://img.shields.io/badge/Linux-orange?style=flat-square&logo=linux&logoColor=white)
 
-## Installation & Setup
+---
 
-``` bash
-git clone https://github.com/msgwebcraft-dev/personal-site.git
-cd personal-site
-npm install
-npm start
+## Project Structure
+
+![alt text](image.png)
+
+
+---
+
+## Setup
+
+```
+npm install;
+npm run dev;
+npm run build;
 ```
 
-## Purpose
 
-This portfolio is for clients, employers, collaborators, and personal
-branding.
+---
 
-## Live Demo
+##  Deployment
 
-https://personal-site-zeta-silk.vercel.app
+**Vercel**  
+Build output: `dist`
+[Live](mmeligabriel.online)
+---
 
 ## 📄 License
 
-Use and modify freely.
-
-## Credits
-
-Built by **Mmela Gabriel**.
+MIT

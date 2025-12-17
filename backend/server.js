@@ -9,7 +9,12 @@ dotenv.config();
 connectDB();
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: [
+    "http://localhost:3000",
+    "https://www.mmeligabriel.online"
+  ]
+}));
 app.use(express.json());
 
 // GET all projects

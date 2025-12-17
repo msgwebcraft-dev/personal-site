@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import AddProjectModal from "../components/AddProjectModal";
-import prep from "../prep.png";
 
-// Initial projects
 const initialProjects = [
   {
     title: "PrepCheck",
@@ -10,7 +8,7 @@ const initialProjects = [
     tools: "React, Express, PostgreSQL",
     liveLink: "https://prepcheck-1.onrender.com/",
     repoLink: "https://github.com/MmelIGaba/PrepCheck",
-    imgSrc: "../prep.png",
+    imgSrc: 'https://github.com/MmelIGaba/Portfolio-images/blob/main/public/images/prep.png?raw=true',
   },
   {
     title: "RetailPulse",
@@ -18,7 +16,7 @@ const initialProjects = [
     tools: "Streamlit, Python, Pandas",
     liveLink: "https://retailpulse-04.streamlit.app/",
     repoLink: "https://github.com/MmelIGaba/RetailPulse",
-    imgSrc: prep,
+    imgSrc: 'https://github.com/MmelIGaba/Portfolio-images/blob/main/public/images/retail.png?raw=true',
   },
   {
     title: "PomoTask",
@@ -26,7 +24,7 @@ const initialProjects = [
     tools: "React, Node.js, MongoDB",
     liveLink: "https://calm-cliff-0b992cc03.3.azurestaticapps.net/",
     repoLink: "https://github.com/itsleonbro/PomoTask",
-    imgSrc: "assets/PomoTask.png",
+    imgSrc: 'https://github.com/MmelIGaba/Portfolio-images/blob/main/public/images/pomotask.png?raw=true',
   },
 ];
 

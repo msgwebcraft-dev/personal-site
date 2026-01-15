@@ -2,37 +2,46 @@ import React, { useState, useEffect } from "react";
 import AddProjectModal from "../components/AddProjectModal";
 
 const initialProjects = [
-    {
+  {
     title: "Plaas Stop",
-    description: "A geospatial e-commerce platform bridging the gap between agricultural producers and buyers. Plaasstop utilizes geolocation and public data scraping to map local farms, allowing users to discover verified vendors and unclaimed farm leads in their vicinity for direct, transparent trade",
-    tools: "React, Node, Firebase, Google Maps API, Geolocation API, Web Scraping, Python",
+    description:
+      "A geospatial e-commerce platform bridging the gap between agricultural producers and buyers. Plaasstop utilizes geolocation and public data scraping to map local farms, allowing users to discover verified vendors and unclaimed farm leads in their vicinity for direct, transparent trade",
+    tools:
+      "React, Node, Firebase, Google Maps API, Geolocation API, Web Scraping, Python",
     liveLink: "https://farmstop.onrender.com",
     repoLink: "https://github.com/MmelIGaba/FarmStop",
-    imgSrc: 'https://github.com/MmelIGaba/Portfolio-images/blob/main/public/images/image.png?raw=true',
+    imgSrc:
+      "https://github.com/MmelIGaba/Portfolio-images/blob/main/public/images/image.png?raw=true",
   },
   {
     title: "PrepCheck",
-    description: "An application for preparing and checking readiness for exams or tasks.",
+    description:
+      "An application for preparing and checking readiness for exams or tasks.",
     tools: "React, Express, PostgreSQL",
     liveLink: "https://prepcheck-1.onrender.com/",
     repoLink: "https://github.com/MmelIGaba/PrepCheck",
-    imgSrc: 'https://github.com/MmelIGaba/Portfolio-images/blob/main/public/images/prep.png?raw=true',
+    imgSrc:
+      "https://github.com/MmelIGaba/Portfolio-images/blob/main/public/images/prep.png?raw=true",
   },
   {
     title: "RetailPulse",
-    description: "A data analyst tool for retail insights and pulse monitoring.",
+    description:
+      "A data analyst tool for retail insights and pulse monitoring.",
     tools: "Streamlit, Python, Pandas",
     liveLink: "https://retailpulse-04.streamlit.app/",
     repoLink: "https://github.com/MmelIGaba/RetailPulse",
-    imgSrc: 'https://github.com/MmelIGaba/Portfolio-images/blob/main/public/images/retail.png?raw=true',
+    imgSrc:
+      "https://github.com/MmelIGaba/Portfolio-images/blob/main/public/images/retail.png?raw=true",
   },
   {
     title: "PomoTask",
-    description: "A productivity app using Pomodoro technique for task management.",
+    description:
+      "A productivity app using Pomodoro technique for task management.",
     tools: "React, Node.js, MongoDB",
     liveLink: "https://calm-cliff-0b992cc03.3.azurestaticapps.net/",
     repoLink: "https://github.com/itsleonbro/PomoTask",
-    imgSrc: 'https://github.com/MmelIGaba/Portfolio-images/blob/main/public/images/pomotask.png?raw=true',
+    imgSrc:
+      "https://github.com/MmelIGaba/Portfolio-images/blob/main/public/images/pomotask.png?raw=true",
   },
 ];
 
@@ -43,13 +52,17 @@ export default function Projects() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
-    const storedProjects = localStorage.getItem("projects");
-    if (storedProjects) {
-      setProjects(JSON.parse(storedProjects));
-    } else {
-      setProjects(initialProjects);
-      localStorage.setItem("projects", JSON.stringify(initialProjects));
-    }
+    const stored = JSON.parse(localStorage.getItem("projects")) || [];
+
+    const merged = [
+      ...stored,
+      ...initialProjects.filter(
+        (p) => !stored.some((s) => s.title === p.title)
+      ),
+    ];
+
+    setProjects(merged);
+    localStorage.setItem("projects", JSON.stringify(merged));
   }, []);
 
   const handleAddButton = () => {
@@ -64,9 +77,9 @@ export default function Projects() {
   return (
     <section className="relative py-24 px-6 flex flex-col items-center">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl w-full">
-        {projects.map((proj, idx) => (
+        {projects.map((proj) => (
           <div
-            key={idx}
+            key={proj.repoLink || proj.title}
             className="bg-[#002630] rounded-xl border border-cyan-900 shadow-lg overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-cyan-500"
           >
             {/* HEADER */}
@@ -83,7 +96,9 @@ export default function Projects() {
                   className="w-full h-48 object-cover rounded-lg border border-cyan-700 transition-transform duration-500 hover:scale-110"
                 />
               )}
-              <p className="text-gray-300 text-center text-sm">{proj.description}</p>
+              <p className="text-gray-300 text-center text-sm">
+                {proj.description}
+              </p>
             </div>
 
             {/* FOOTER */}

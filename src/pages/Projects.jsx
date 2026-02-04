@@ -8,7 +8,7 @@ const initialProjects = [
       "A geospatial e-commerce platform bridging the gap between agricultural producers and buyers. Plaasstop utilizes geolocation and public data scraping to map local farms, allowing users to discover verified vendors and unclaimed farm leads in their vicinity for direct, transparent trade",
     tools:
       "React, Node, Firebase, Google Maps API, Geolocation API, Web Scraping, Python",
-    liveLink: "https://farmstop.onrender.com",
+    liveLink: "https://farmstop.mmeligabriel.online/",
     repoLink: "https://github.com/MmelIGaba/FarmStop",
     imgSrc:
       "https://github.com/MmelIGaba/Portfolio-images/blob/main/public/images/image.png?raw=true",
@@ -45,7 +45,7 @@ const initialProjects = [
   },
 ];
 
-const PASSWORD = "ChristIsKing"; // password for adding projects
+const PASSWORD = "ChristIsKing"; // Assuming noone will see this :)
 
 export default function Projects() {
   const [projects, setProjects] = useState([]);

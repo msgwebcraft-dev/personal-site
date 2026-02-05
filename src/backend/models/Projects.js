@@ -1,14 +1,12 @@
-// projects
 import mongoose from "mongoose";
 
-const ProjectSchema = new mongoose.Schema({
-  title: String,
-  description: String,
+const projectSchema = new mongoose.Schema({
+  title: { type: String, required: true },
+  description: { type: String, required: true },
   tools: String,
   liveLink: String,
   repoLink: String,
   imgSrc: String,
-});
+}, { timestamps: true });
 
-export default mongoose.model("Project", ProjectSchema);
-
+export default mongoose.model("Project", projectSchema);

@@ -5,7 +5,7 @@ const initialProjects = [
   {
     title: "Plaas Stop",
     description:
-      "A geospatial e-commerce platform bridging the gap between agricultural producers and buyers. Plaasstop utilizes geolocation and public data scraping to map local farms, allowing users to discover verified vendors and unclaimed farm leads in their vicinity for direct, transparent trade...",
+      "Plaasstop is a geospatial e‑commerce platform that connects farmers and buyers by mapping local farms with geolocation and public data, enabling direct, transparent trade with verified vendors and new leads.",
     tools:
       "React, Node, Firebase, Google Maps API, Geolocation API, Web Scraping, Python",
     liveLink: "https://farmstop.mmeligabriel.online",
@@ -57,7 +57,7 @@ export default function Projects() {
     const merged = [
       ...stored,
       ...initialProjects.filter(
-        (p) => !stored.some((s) => s.title === p.title)
+        (p) => !stored.some((s) => s.title === p.title),
       ),
     ];
 

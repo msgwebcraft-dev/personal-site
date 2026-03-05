@@ -13,6 +13,8 @@ export default function App() {
   const canvasRef = useRef(null);
 
   useEffect(() => {
+    localStorage.clear();
+    
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
 
@@ -34,39 +36,34 @@ export default function App() {
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
           radius: Math.random() * 1.8,
-          alpha: Math.random(), // brightness
-          alphaChange: Math.random() * 0.02 - 0.01, // flicker speed
+          alpha: Math.random(), 
+          alphaChange: Math.random() * 0.02 - 0.01, 
         });
       }
     }
     initStars();
 
-    // --- RIPPLES ---
     let ripples = [];
 
     function draw() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      // MIDNIGHT SKY BACKGROUND
       const grd = ctx.createLinearGradient(0, 0, 0, canvas.height);
       grd.addColorStop(0, "#00010f");
       grd.addColorStop(1, "#00121c");
       ctx.fillStyle = grd;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-      // 🌟 STARS
       for (let s of stars) {
         ctx.beginPath();
         ctx.arc(s.x, s.y, s.radius, 0, Math.PI * 2);
         ctx.fillStyle = `rgba(255, 255, 255, ${s.alpha})`;
         ctx.fill();
 
-        // flicker
         s.alpha += s.alphaChange;
         if (s.alpha <= 0 || s.alpha >= 1) s.alphaChange *= -1;
       }
 
-      // 🌊 RIPPLES
       ripples = ripples.filter((r) => r.alpha > 0);
 
       for (let r of ripples) {
@@ -85,7 +82,6 @@ export default function App() {
 
     draw();
 
-    // LISTENERS
     const handleMove = (e) =>
       ripples.push({ x: e.clientX, y: e.clientY, radius: 5, alpha: 0.35 });
 
@@ -109,7 +105,7 @@ export default function App() {
         ref={canvasRef}
         className="fixed inset-0 w-full h-full pointer-events-none"
         style={{
-          zIndex: -1, // ensure it's behind everything
+          zIndex: -1, 
           position: "fixed",
         }}
       />

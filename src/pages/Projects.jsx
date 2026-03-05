@@ -2,6 +2,14 @@ import React, { useState, useEffect } from "react";
 import AddProjectModal from "../components/AddProjectModal";
 
 const initialProjects = [
+  {title: "COVID-19 Data Lake",
+    description:
+      "Serverless data lake on AWS using S3, Glue, Athena, Lake Formation, Lambda, and EventBridge. Ingests, transforms, and analyzes the COVID-19 dataset with 98% Athena cost reduction through Parquet conversion, Snappy compression, and year/month partitioning.",
+    tools: "Streamlit, Python, AWS S3, Glue, Athena, Lake Formation, Lambda, EventBridge",
+    liveLink: "https://aws-data-lake-z5kqpnkcs5pzcuhegqsqln.streamlit.app/#",
+    repoLink: "https://github.com/MmelIGaba/AWS-Data-Lake",
+    imgSrc:
+      "https://github.com/MmelIGaba/Portfolio-images/blob/main/public/images/Covid.png?raw=true"},
   {
     title: "Plaas Stop",
     description:
@@ -11,7 +19,7 @@ const initialProjects = [
     liveLink: "https://farmstop.mmeligabriel.online",
     repoLink: "https://github.com/MmelIGaba/FarmStop",
     imgSrc:
-      "https://github.com/MmelIGaba/Portfolio-images/blob/main/public/images/image.png?raw=true",
+      "https://github.com/MmelIGaba/Portfolio-images/blob/main/public/images/Farm.png?raw=true",
   },
   {
     title: "PrepCheck",
